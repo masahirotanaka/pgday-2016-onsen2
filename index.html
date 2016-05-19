@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction of Onsen UI and Monaca</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+		.reveal section img.noborder {
+			border: none;
+			box-shadow: none;
+			margin: none;
+		}
+		#frame {
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			width: 130px;
+			height: 30px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="frame">
+			<img src="img/monaca-onsen.png" alt="Monaca and Onsen UI" width="250">
+		</div>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Introducing <a href="https://onsen.io/" style="color: inherit;">Onsen UI 2.0</a></h2>
+					<p>Customizable and JS-Framework Agnostic UI Framework</p>
+					<p>
+						<small>Masa Tanaka, Founder of <a href="https://monaca.io">Monaca</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>About Me and the Team</h2>
+					<p><img src="img/face.jpg" width="200" class="noborder"></p>
+					<ul>
+						<li class="fragment">HTML5 company based in Tokyo, Japan.</li>
+						<li class="fragment">Long-time Cordova enthusiast.</li>
+						<li class="fragment">Creator of <a href="#/2">Cordova-kun's Final Quest</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<iframe data-src="http://monaca.github.io/rpg/" style="width: 830px; height: 650px"></iframe>
+				</section>
+
+				<section>
+					<h4>Our Line-up</h4>
+					<table width="100%">
+						<tr>
+							<th width="50%" align="center">
+								<img src="img/Monaca_Logo_02.svg" class="noborder" style="width: 60%;" alt="Monaca">
+							</th>
+							<th width="50%" align="center">
+								<img src="img/Onsen_UI_Logo_02.svg" class="noborder" style="width: 60%;" alt="Onsen UI">
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<p><small>Cloud based dev suite for Cordova. Includes CLI, desktop app and browser-based IDE.</small></p>
+								<ul style="font-size: 60%">
+									<li>Remote build for iOS, Android and Windows.</li>
+									<li>Debugging and testing app.</li>
+									<li>Push notifications, in-app update, encryption and more.</li>
+								</ul>
+							</td>
+							<td>
+								<p><small>HTML5 UI framework for Cordova &amp; mobile apps.</small></p>
+								<ul style="font-size: 60%">
+									<li>Open-source project.</li>
+									<li>Designed for iOS and Android.</li>
+									<li>Framework agnostic.</li>
+									<li>Onsen => 温泉 => Hot springs => SPA!</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h2>Introducing Onsen UI 2.0 <span class="fragment fade-up">RC</span></h2>
+					<br><br>
+					<img src="img/logo_onsenui_v2.svg" class="noborder" width="50%">
+				</section>
+
+				<section>
+					<h2>Both in Material and Flat Design</h2>
+					<iframe src="https://onsenui.github.io/showcase-carousel" width="800" height="300"></iframe>
+				</section>
+
+				<section>
+					<h2>Framework Agnostic</h2>
+					<p>Web Components, React, Angular 1 and 2 altogether.</p>
+					<img src="https://onsen.io/images/2/fully-independent.png" style="border:0; box-shadow: none">
+				</section>
+
+				<section>
+					<h2>Web Components API</h2>
+
+<div>
+	<iframe style="border: 1px solid #ccc; float: left; width: 300px; height: 500px;" src="http://tutorial.onsen.io/embed.html?framework=vanilla&category=Reference&module=tabbar"></iframe>
+	<div style="margin-left: 320px;">
+	<p><small>All components are described as HTML5 tags. Friendly with jQuery, Vue.js, Ember.js, etc.</small></p>
+
+					<pre><code style="height: 600px;"><ons-tabbar>
+  <ons-tab label="Tab 1" page="tab1.html" active>
+  </ons-tab>
+  <ons-tab label="Tab 2" page="tab2.html">
+  </ons-tab>
+</ons-tabbar>
+
+<ons-template id="tab1.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">Tab 1</div>
+    </ons-toolbar>
+
+    <p style="text-align: center;">
+      This is the first page.
+    </p>
+  </ons-page>
+</ons-template>
+					</code></pre>
+	</div>
+</div>
+				</section>
+
+				<section>
+					<h2>Angular 1 &amp; 2 API</h2>
+
+<div>
+	<iframe style="border: 1px solid #ccc; float: left; width: 300px; height: 500px;" src="http://tutorial.onsen.io/embed.html?framework=angular1&category=Getting%20started&module=Introduction"></iframe>
+	<div style="margin-left: 320px;">
+	<p><small>Works nicely with AngularJS data bindings and models. Angular 2 support is now in beta stage.</small></p>
+
+					<pre><code style="height: 600px;"><ons-page ng-controller="PersonController as person">
+  <ons-toolbar>
+    <div class="center">Introduction</div>
+  </ons-toolbar>
+
+  <section style="margin: 10px;">
+    <p>What is your name?</p>
+    <p>
+      <ons-input modifier="underbar" ng-model="person.name" placeholder="Your name" float></ons-input>
+    </p>
+    <p>
+      Hello, {{ person.name || 'stranger' }}!
+    </p>
+  </section>
+</ons-page>
+					</code></pre>
+	</div>
+</div>
+				</section>
+
+
+				<section>
+					<h2>React API</h2>
+
+					<div>
+						<p><small>Onsen UI in React Components. Provides competitive interface as React Native with using HTML5 capability.</small></p>
+
+						<pre><code class="babel">var Ons = import('react-onsenui');
+
+var MyPage = React.createClass({
+  handleClick: function() {
+    ons.notification.alert('Hello world!');
+  },
+
+  render: function() {
+    return (
+      &lt;Ons.Page&gt;
+        &lt;Ons.Toolbar&gt;
+          &lt;div className="center"&gt;My app&lt;/div&gt;
+        &lt;/Ons.Toolbar&gt;
+
+        &lt;Ons.Button onClick={this.handleClick}&gt;
+          Click me!
+        &lt;/Ons.Button&gt;
+      &lt;/Ons.Page&gt;
+    );
+  }
+});
+
+ons.ready(function() {
+  ReactDOM.render(&lt;MyPage /&gt;, document.getElementById('app'));
+});
+					</code></pre>
+				</div>
+				</section>
+
+				<section>
+					<h4>Giro d'Italia Official App</h4>
+					<p><img style="width: 300px;" src="https://lh3.googleusercontent.com/bxIX_iy6lMR1KFaPurxYlhtOlP-xWrU4sL8dKLq5zH33_uEz8jOopbwgSqOLIUmWDw=h900-rw"></p>
+					<p><small>Ranked #1 in App Store Italy downloads!</small></p>
+				</section>
+
+				<section>
+					<h4>Giro d'Italia Official App</h4>
+					<p><img style="width: 300px;" src="https://lh3.googleusercontent.com/bxIX_iy6lMR1KFaPurxYlhtOlP-xWrU4sL8dKLq5zH33_uEz8jOopbwgSqOLIUmWDw=h900-rw"></p>
+					<p><small>Ranked #1 in App Store Italy downloads!</small></p>
+				</section>
+
+				<section>
+					<h2>Getting started</h2>
+					<p>Use <a href="https://docs.monaca.io/en/quick_start/cli/">Monaca CLI</a>, the command-line tool for Onsen UI app.</p>
+					<pre><code class="bash" data-trim data-noescape>
+# Install via NPM command.
+$ npm install -g monaca
+
+# Create from starter kit.
+$ monaca create helloworld
+? Choose a template category: (Use arrow keys)
+> Onsen UI
+  Onsen UI and Angular 1
+  Onsen UI and Angular 2 (Coming soon)
+  Onsen UI and React
+
+$ monaca preview     # Run the app on browser.
+$ monaca debug       # Run the app on your device using Monaca Debugger.
+
+# Build and package app via Monaca Cloud.
+$ monaca remote build
+
+					</code></pre>
+					<p><small>To use Monaca Debugger, simply download the app from <a href="https://play.google.com/store/apps/details?id=mobi.monaca.debugger&hl=en">Google Play Store</a> or <a href="https://itunes.apple.com/en/app/monaca/id550941371?mt=8">App Store</a>.</small></p>
+				</section>
+
+				<section>
+					<h2>From Here...</h2>
+					<p><small>Visit <a href="https://onsen.io">Onsen UI Website</a>, or <a href="https://tutorial.onsen.io/">interactive tutorial</a>.</small></p>
+					<a href="http://tutorial.onsen.io/" target="_blank">
+						<img align="Onsen UI Interactive Tutorial" src="img/onsenui_tutorial.png" style="margin: 0; border-width: 1px; box-shadow: none;">
+					</a>
+				</section>
+
+				<section>
+					<p>That's it!</p>
+					<h2>Thank You!</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
