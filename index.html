@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -42,8 +44,8 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Introducing <a href="https://onsen.io/" style="color: inherit;">Onsen UI 2.0</a></h2>
-					<p>Customizable and JS-Framework Agnostic UI Framework</p>
+					<h1><span style="font-size: 60%; color: #444;">Introducing</span><br><a href="https://onsen.io/" style="color: inherit;">Onsen UI 2.0</a></h1>
+					<p style="color: #444;">Customizable and JS-Framework Agnostic UI Framework</p>
 					<p>
 						<small>Masa Tanaka, Founder of <a href="https://monaca.io">Monaca</a></small>
 					</p>
@@ -55,6 +57,7 @@
 					<ul>
 						<li class="fragment">HTML5 company based in Tokyo, Japan.</li>
 						<li class="fragment">Long-time Cordova enthusiast.</li>
+						<li class="fragment">Creator of <a href="https://onsen.io/blog/content/images/2015/Dec/lego-1.jpg" data-lightbox="Cordova-kun">Cordova-kun</a><a href="https://onsen.io/blog/content/images/2015/Dec/lego-2.jpg" data-lightbox="Cordova-kun">&nbsp;</a>bot.</li>
 						<li class="fragment">Creator of <a href="#/2">Cordova-kun's Final Quest</a></li>
 					</ul>
 				</section>
@@ -185,7 +188,6 @@ var MyPage = React.createClass({
   handleClick: function() {
     ons.notification.alert('Hello world!');
   },
-
   render: function() {
     return (
       &lt;Ons.Page&gt;
@@ -201,17 +203,9 @@ var MyPage = React.createClass({
   }
 });
 
-ons.ready(function() {
-  ReactDOM.render(&lt;MyPage /&gt;, document.getElementById('app'));
-});
+ReactDOM.render(&lt;MyPage /&gt;, document.getElementById('app'));
 					</code></pre>
 				</div>
-				</section>
-
-				<section>
-					<h4>Giro d'Italia Official App</h4>
-					<p><img style="width: 300px;" src="https://lh3.googleusercontent.com/bxIX_iy6lMR1KFaPurxYlhtOlP-xWrU4sL8dKLq5zH33_uEz8jOopbwgSqOLIUmWDw=h900-rw"></p>
-					<p><small>Ranked #1 in App Store Italy downloads!</small></p>
 				</section>
 
 				<section>
@@ -278,4 +272,5 @@ $ monaca remote build
 			});
 		</script>
 	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox-plus-jquery.min.js"></script>
 </html>
